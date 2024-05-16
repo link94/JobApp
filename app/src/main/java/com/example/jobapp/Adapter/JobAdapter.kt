@@ -1,10 +1,12 @@
 package com.example.jobapp.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.jobapp.Activity.DetailJobActivity
 import com.example.jobapp.Model.JobModel
 import com.example.jobapp.databinding.ViewholderJobBinding
 
@@ -35,6 +37,12 @@ class JobAdapter(private val items:List<JobModel>): RecyclerView.Adapter<JobAdap
         Glide.with(holder.itemView.context)
             .load(drawableResourceId)
             .into(holder.binding.pic)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, DetailJobActivity::class.java)
+            intent.putExtra("object",item)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = items.size
