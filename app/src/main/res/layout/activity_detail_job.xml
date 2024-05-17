@@ -63,6 +63,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="64dp"
+                            android:elevation="3dp"
                             android:background="@drawable/white_top_corner_bg"
                             android:orientation="vertical"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -334,7 +335,7 @@
                                 <androidx.viewpager.widget.ViewPager
                                     android:id="@+id/viewpager"
                                     android:layout_width="match_parent"
-                                    android:layout_height="150dp"
+                                    android:layout_height="200dp"
                                     android:background="@color/white" />
 
                             </LinearLayout>
